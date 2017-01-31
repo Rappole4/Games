@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Game</title>
+		<link rel="stylesheet" type="text/css" href="Game2.css">
+	</head>
+	<body>
+			<img id="background" src="backgroun.jpg">
+			<span id="counter">45</span>
+		<div class="riddles">
+			<h1>Safe Passage</h1>
+			<h3>Instructions</h3>
+			<p>A quick explanation of this game.  The goal is to not only reach the pot of gold inside the maze, but also to have a complete path connecting the gold to the exit.  As you click boxes inside the grid your number of moves will go down.  If you reach zero moves before you reach the goal, the game will alert you that you have lost and will then reset the game.  Answer the questions below to get either hints or directions on how to move through the maze.  Answer carefully though, you only get one chance per question and then it is gone.  Answers are all one word or number and must be either numberic or spelled correctly.</p>
+			<label>Step 1: What awaits you at the goal?  Your hint is AU: </label><input id="gold"><br>
+			<input id="first" type="submit" value="Answer"/><span id="ans1"></span><hr>
+			<label>Step 2: Alright, you'll need to know a compass if you want to understand our hints.  If going toward the top of the grid is considered moving North, what is moving left on the board? </label><input id="west3"><br>
+			<input id="second" type="submit" value="Answer"/><span id="ans2"></span><hr>
+			<label>Step 3: 10 years is called a what? </label><input id="south2"><br>
+			<input id="third" type="submit" value="Answer"/><span id="ans3"></span><hr>
+			<label>Step 4: How many items in a BAKER'S dozen</label><input id="east2"><br>
+			<input id="fourth" type="submit" value="Answer"/><span id="ans4"></span><hr>
+			<label>Step 5: How many blocks would be on this grid if you took ten blocks away?</label><input id="south4"><br>
+			<input id="fifth" type="submit" value="Answer"/><span id="ans5"></span><hr>
+			<label>Step 6: What is 6 times 6, divided by 6, to the 6th power, to the 6th root? </label><input id="west2"><br>
+			<input id="sixth" type="submit" value="Answer"/><span id="ans6"></span><hr>
+			<label>Step 7: What was our first president's last name?</label><input id="six"><br>
+			<input id="seventh" type="submit" value="Answer"/><span id="ans7"></span><hr>
+			<label>Step 8: Is the North pole or the South pole located in Antarctica? </label><input id="south"><br>
+			<input id="eighth" type="submit" value="Answer"/><span id="ans8"></span><hr>
+			<label>Step 9: How many days are in the month of Novemeber? </label><input id="thirty"><br>
+			<input id="nineth" type="submit" value="Answer"/><span id="ans9"></span><hr>
+			<label>Step 10: What is the capital of North Carolina? </label><input id="raleigh"><br>
+			<input id="tenth" type="submit" value="Answer"/><span id="ans10"></span><hr>
+		</div>
+		<div id="grid">
+		<div class="row0">
+			<div id="A" class="gridsquare0 all">(1,1)</div>
+			<div id="B" class="gridsquare1 all">(1,2)</div>
+			<div id="C" class="gridsquare2 all">(1,3)</div>
+			<div id="D" class="gridsquare3 all">(1,4)</div>
+			<div id="E" class="gridsquare4 all">(1,5)</div>
+			<div id="F" class="gridsquare5 all">(1,6)</div>
+			<div id="G" class="gridsquare6 all">(1,7)</div>
+			<div id="H" class="gridsquare7 all">(1,8)</div>
+			<div id="I" class="gridsquare8 all">(1,9)</div>
+			<div id="J" class="gridsquare9 all">(1,10)</div>
+		</div>
+		<div class="row1">
+			<div id="K" class="gridsquare0 all">(2,1)</div>
+			<div id="L" class="gridsquare1 all green">(2,2)</div>
+			<div id="M" class="gridsquare2 all green">(2,3)</div>
+			<div id="N" class="gridsquare3 all green">(2,4)</div>
+			<div id="O" class="gridsquare4 all">(2,5)</div>
+			<div id="P" class="gridsquare5 all green">(2,6)</div>
+			<div id="Q" class="gridsquare6 all green">(2,7)</div>
+			<div id="R" class="gridsquare7 all green">(2,8)</div>
+			<div id="S" class="gridsquare8 all green">(2,9)</div>
+			<div id="T" class="gridsquare9 all">(2,10)</div>
+		</div>
+		<div class="row2">
+			<div id="U" class="gridsquare0 all">(3,1)</div>
+			<div id="V" class="gridsquare1 all green">(3,2)</div>
+			<div id="W" class="gridsquare2 all">(3,3)</div>
+			<div id="X" class="gridsquare3 all green">(3,4)</div>
+			<div id="Y" class="gridsquare4 all green">(3,5)</div>
+			<div id="Z" class="gridsquare5 all green">(3,6)</div>
+			<div id="AA" class="gridsquare6 all">(3,7)</div>
+			<div id="BB" class="gridsquare7 all">(3,8)</div>
+			<div id="CC" class="gridsquare8 all green">(3,9)</div>
+			<div id="DD" class="gridsquare9 all">(3,10)</div>
+		</div>
+		<div class="row3">
+			<div id="E0" class="gridsquare0 all">(4,1)</div>
+			<div id="E1" class="gridsquare1 all green">(4,2)</div>
+			<div id="E2" class="gridsquare2 all">(4,3)</div>
+			<div id="E3" class="gridsquare3 all">(4,4)</div>
+			<div id="E4" class="gridsquare4 all">(4,5)</div>
+			<div id="E5" class="gridsquare5 all">(4,6)</div>
+			<div id="E6" class="gridsquare6 all">(4,7)</div>
+			<div id="E7" class="gridsquare7 all green">(4,8)</div>
+			<div id="E8" class="gridsquare8 all green">(4,9)</div>
+			<div id="E9" class="gridsquare9 all">(4,10)</div>
+		</div>
+		<div class="row4">
+			<div id="F0" class="gridsquare0 all">(5,1)</div>
+			<div id="F1" class="gridsquare1 all green">(5,2)</div>
+			<div id="F2" class="gridsquare2 all green">(5,3)</div>
+			<div id="F3" class="gridsquare3 all green">(5,4)</div>
+			<div id="F4" class="gridsquare4 all">(5,5)</div>
+			<div id="F5" class="gridsquare5 all green"">(5,6)</div>
+			<div id="F6" class="gridsquare6 all green">(5,7)</div>
+			<div id="F7" class="gridsquare7 all green">(5,8)</div>
+			<div id="F8" class="gridsquare8 all">(5,9)</div>
+			<div id="F9" class="gridsquare9 all">(5,10)</div>
+		</div>
+		<div class="row5">
+			<div id="G0" class="gridsquare0 all">(6,1)</div>
+			<div id="G1" class="gridsquare1 all">(6,2)</div>
+			<div id="G2" class="gridsquare2 all">(6,3)</div>
+			<div id="G3" class="gridsquare3 all">(6,4)</div>
+			<div id="G4" class="gridsquare4 all">(6,5)</div>
+			<div id="G5" class="gridsquare5 all green">(6,6)</div>
+			<div id="G6" class="gridsquare6 all">(6,7)</div>
+			<div id="G7" class="gridsquare7 all">(6,8)</div>
+			<div id="G8" class="gridsquare8 all">(6,9)</div>
+			<div id="G9" class="gridsquare9 all">(6,10)</div>
+		</div>
+		<div class="row6">
+			<div id="H0" class="gridsquare0 all">(7,1)</div>
+			<div id="H1" class="gridsquare1 all green">(7,2)</div>
+			<div id="H2" class="gridsquare2 all green">(7,3)</div>
+			<div id="H3" class="gridsquare3 all green">(7,4)</div>
+			<div id="H4" class="gridsquare4 all">(7,5)</div>
+			<div id="H5" class="gridsquare5 all green">(7,6)</div>
+			<div id="H6" class="gridsquare6 all green">(7,7)</div>
+			<div id="H7" class="gridsquare7 all green">(7,8)</div>
+			<div id="H8" class="gridsquare8 all">(7,9)</div>
+			<div id="H9" class="gridsquare9 all">(7,10)</div>
+		</div>
+		<div class="row7">
+			<div id="I0" class="gridsquare0 all">(8,1)</div>
+			<div id="I1" class="gridsquare1 all green">(8,2)</div>
+			<div id="I2" class="gridsquare2 all">(8,3)</div>
+			<div id="I3" class="gridsquare3 all green">(8,4)</div>
+			<div id="I4" class="gridsquare4 all">(8,5)</div>
+			<div id="I5" class="gridsquare5 all">(8,6)</div>
+			<div id="I6" class="gridsquare6 all">(8,7)</div>
+			<div id="I7" class="gridsquare7 all green">(8,8)</div>
+			<div id="I8" class="gridsquare8 all">(8,9)</div>
+			<div id="I9" class="gridsquare9 all">(8,10)</div>
+		</div>
+		<div class="row8">
+			<div id="J0" class="gridsquare0 all">(9,1)</div>
+			<div id="J1" class="gridsquare1 all green">(9,2)</div>
+			<div id="J2" class="gridsquare2 all">(9,3)</div>
+			<div id="J3" class="gridsquare3 all green">(9,4)</div>
+			<div id="J4" class="gridsquare4 all green">(9,5)</div>
+			<div id="J5" class="gridsquare5 all green">(9,6)</div>
+			<div id="J6" class="gridsquare6 all green">(9,7)</div>
+			<div id="J7" class="gridsquare7 all green">(9,8)</div>
+			<div id="J8" class="gridsquare8 all">(9,9)</div>
+			<div id="J9" class="gridsquare9 all">(9,10)</div>
+		</div>
+		<div class="row9">
+			<div id="K0" class="gridsquare0 all green">(10,1)</div>
+			<div id="K1" class="gridsquare1 all">(10,2)</div>
+			<div id="K2" class="gridsquare2 all">(10,3)</div>
+			<div id="K3" class="gridsquare3 all">(10,4)</div>
+			<div id="K4" class="gridsquare4 all">(10,5)</div>
+			<div id="K5" class="gridsquare5 all">(10,6)</div>
+			<div id="K6" class="gridsquare6 all">(10,7)</div>
+			<div id="K7" class="gridsquare7 all">(10,8)</div>
+			<div id="K8" class="gridsquare8 all">(10,9)</div>
+			<div id="K9" class="gridsquare9 all">(10,10)</div>
+		</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="Game2.js"></script>
+	</body>
+</html>
