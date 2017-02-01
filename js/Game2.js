@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded",function(){
 					document.getElementById("F3").style.display="none"
 					alert("You Win! Congratulations!!!")
 					document.getElementById("grid").style.display="none"
-					document.getElementById("background").src = "img/winner.jpg"
+					document.getElementById("background").style.display="none"
 				}
 				console.log(good)
 			});

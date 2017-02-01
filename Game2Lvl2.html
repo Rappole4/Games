@@ -10,38 +10,22 @@
 		<div class="riddles">
 			<h1>Safe Passage</h1>
 			<h3>Instructions</h3>
-			<p>Ok level two is a bit different than level 1.  For starters no longer does it matter how many clicks you have, but if you touch lava you're going to get burnt.  Other surprises await you as well. You will start on the space given to you.</p>
-			<label>Step 1: What awaits you at the goal?  Your hint is AU: </label><input id="gold"><br>
-			<input id="first" type="submit" value="Answer"/><span id="ans1"></span><hr>
-			<label>Step 2: Alright, you'll need to know a compass if you want to understand our hints.  If going toward the top of the grid is considered moving North, what is moving left on the board? </label><input id="west3"><br>
-			<input id="second" type="submit" value="Answer"/><span id="ans2"></span><hr>
-			<label>Step 3: 10 years is called a what? </label><input id="south2"><br>
-			<input id="third" type="submit" value="Answer"/><span id="ans3"></span><hr>
-			<label>Step 4: How many items in a BAKER'S dozen</label><input id="east2"><br>
-			<input id="fourth" type="submit" value="Answer"/><span id="ans4"></span><hr>
-			<label>Step 5: How many blocks would be on this grid if you took ten blocks away?</label><input id="south4"><br>
-			<input id="fifth" type="submit" value="Answer"/><span id="ans5"></span><hr>
-			<label>Step 6: What is 6 times 6, divided by 6, to the 6th power, to the 6th root? </label><input id="west2"><br>
-			<input id="sixth" type="submit" value="Answer"/><span id="ans6"></span><hr>
-			<label>Step 7: What was our first president's last name?</label><input id="six"><br>
-			<input id="seventh" type="submit" value="Answer"/><span id="ans7"></span><hr>
-			<label>Step 8: Is the North pole or the South pole located in Antarctica? </label><input id="south"><br>
-			<input id="eighth" type="submit" value="Answer"/><span id="ans8"></span><hr>
-			<label>Step 9: How many days are in the month of Novemeber? </label><input id="thirty"><br>
-			<input id="nineth" type="submit" value="Answer"/><span id="ans9"></span><hr>
-			<label>Step 10: What is the capital of North Carolina? </label><input id="raleigh"><br>
-			<input id="tenth" type="submit" value="Answer"/><span id="ans10"></span><hr>
+			<p>Level 2 is quite different from Level 1, for starters there are no more questions. Second you have life and not moves.  Your life will only go down if you fall off the track or ...  Anyhow there are some "helpful" hints you'll find on your way, but besides that you're on your own.  Navigate your character to the entrance (you'll know it when you get there) and the gold without hitting zero life to win.</p>
+			<h4>Riddle spot!</h4>
+			<span id="help"></span><hr>
 		</div>
+
 		<div id="grid">
+		<img id="hero" src="img/player.jpg">
 		<div class="row0">
-			<div id="A" class="gridsquare0 all green">(1,1)</div>
+			<div id="A" class="gridsquare0 all green goal">(1,1)</div>
 			<div id="B" class="gridsquare1 all red">(1,2)</div>
 			<div id="C" class="gridsquare2 all green">(1,3)</div>
 			<div id="D" class="gridsquare3 all green">(1,4)</div>
 			<div id="E" class="gridsquare4 all green">(1,5)</div>
 			<div id="F" class="gridsquare5 all red">(1,6)</div>
 			<div id="G" class="gridsquare6 all red">(1,7)</div>
-			<div id="H" class="gridsquare7 all green">(1,8)</div>
+			<div id="H" class="gridsquare7 all green goal">(1,8)</div>
 			<div id="I" class="gridsquare8 all green">(1,9)</div>
 			<div id="J" class="gridsquare9 all green">(1,10)</div>
 		</div>
