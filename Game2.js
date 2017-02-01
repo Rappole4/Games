@@ -1,12 +1,26 @@
 	var count = 45;
+	var good = 38;
 
 document.addEventListener("DOMContentLoaded",function(){
+
+		document.querySelectorAll(".green").forEach(function(el){
+			el.addEventListener("click",function(){
+				good = good - 1
+				if(good == 0){
+					document.getElementById("F3").style.display="none"
+					alert("You Win! Congratulations!!!")
+					document.getElementById("grid").style.display="none"
+					document.getElementById("background").src = "winner.jpg"
+				}
+				console.log(good)
+			});
+		});
 
 		document.querySelectorAll(".all").forEach(function(el){
 			el.addEventListener("click",function(){
 				count = count - 1
 				document.getElementById("counter").innerText = count
-				if(count == 0){
+				if(!good == 0 && count == 0){
 					alert("Sorry you lose, please try again!")
 					location.reload();
 				}
@@ -21,39 +35,39 @@ document.addEventListener("DOMContentLoaded",function(){
 		if(document.getElementById("gold").value==("gold")||document.getElementById("gold").value==("Gold")||document.getElementById("gold").value==("GOLD")){
 			document.getElementById("ans1").innerText = " Great! (10,2) will get you one step closer"
 		} else {
-			document.getElementById("ans1").innerText = " Nope, sorry guess you're going to have to guess this time";
+			document.getElementById("ans1").innerText = " Nope, sorry guess you're going to have to guess this time. (you have 1 block to guess)";
 			document.getElementById("first").style.display="none";
 		}
 	}
 	document.getElementById("second").onclick = function(){
 		if(document.getElementById("west3").value==("west")||document.getElementById("west3").value==("West")||document.getElementById("west3").value==("WEST")){
-			document.getElementById("ans2").innerText = " Great! Click the next 3 blocks West of your current location"
+			document.getElementById("ans2").innerText = " Great! Click the next 3 blocks West of the first hints end point."
 		} else {
-			document.getElementById("ans2").innerText = " Nope, knowing the directions of a compass will help out a lot in life, I suggest you learn them, cause now you're walking blind.";
+			document.getElementById("ans2").innerText = " Nope, knowing the directions of a compass will help out a lot in life, I suggest you learn them, cause now you're walking blind. (you have 3 blocks to guess)";
 			document.getElementById("second").style.display="none";
 		}
 	}
 	document.getElementById("third").onclick = function(){
 		if(document.getElementById("south2").value==("decade")||document.getElementById("south2").value==("Decade")||document.getElementById("south2").value==("DECADE")){
-			document.getElementById("ans3").innerText = " Great! Take the next 2 blocks South of your current location, then take 2 more blocks East"
+			document.getElementById("ans3").innerText = " Great! Take the next 2 blocks South of last hints end point, then take 2 more blocks East"
 		} else {
-			document.getElementById("ans3").innerText = " Nope, sorry guess you're going to have to guess this time";
+			document.getElementById("ans3").innerText = " Nope, sorry guess you're going to have to guess this time. (you have 4 blocks to guess";
 			document.getElementById("third").style.display="none";
 		}
 	}
 	document.getElementById("fourth").onclick = function(){
 		if(document.getElementById("east2").value==("thirteen")||document.getElementById("east2").value==("Thirteen")||document.getElementById("east2").value==("THIRTEEN")||document.getElementById("east2").value==("13")){
-			document.getElementById("ans4").innerText = " Great! Take the next 4 blocks South of your current location"
+			document.getElementById("ans4").innerText = " Great! Take the next 4 blocks South."
 		} else {
-			document.getElementById("ans4").innerText = " Nope, sorry guess you're going to have to guess this time";
+			document.getElementById("ans4").innerText = " Nope, sorry guess you're going to have to guess this time (4 blocks to guess)";
 			document.getElementById("fourth").style.display="none";
 		}
 	}
 	document.getElementById("fifth").onclick = function(){
 		if(document.getElementById("south4").value==("ninety")||document.getElementById("south4").value==("Ninety")||document.getElementById("south4").value==("NINETY")||document.getElementById("south4").value==("90")){
-			document.getElementById("ans5").innerText = " Great! Take the next 2 blocks West of your current location"
+			document.getElementById("ans5").innerText = " Great! Take the next 2 blocks West."
 		} else {
-			document.getElementById("ans5").innerText = " Nope, sorry guess you're going to have to guess this time";
+			document.getElementById("ans5").innerText = " Nope, sorry guess you're going to have to guess this time. (2 blocks to guess)";
 			document.getElementById("fifth").style.display="none";
 		}
 	}
@@ -61,15 +75,15 @@ document.addEventListener("DOMContentLoaded",function(){
 		if(document.getElementById("west2").value==("six")||document.getElementById("west2").value==("Six")||document.getElementById("west2").value==("SIX")||document.getElementById("west2").value==("6")){
 			document.getElementById("ans6").innerText = " Great! Now I wouldn't go South to start with, but if you click 6 blocks divided evenly among 3 of the possible directions, you'll get around the danger to the West."
 		} else {
-			document.getElementById("ans6").innerText = " Nope, sorry guess you're going to have to guess this time";
+			document.getElementById("ans6").innerText = " Nope, sorry guess you're going to have to guess this time. (6 blocks to guess)";
 			document.getElementById("sixth").style.display="none";
 		}
 	}
 	document.getElementById("seventh").onclick = function(){
 		if(document.getElementById("six").value==("Washington")||document.getElementById("six").value==("WASHINGTON")){
-			document.getElementById("ans7").innerText = " Great! You can click one West of you, then (4,9),(3,9) and (2,9) are all safe."
+			document.getElementById("ans7").innerText = " Great! You can click one West, then (4,9),(3,9) and (2,9) are all safe."
 		} else {
-			document.getElementById("ans7").innerText = " Nope, sorry guess you're going to have to guess this time";
+			document.getElementById("ans7").innerText = " Nope, sorry guess you're going to have to guess this time. (4 blocks to guess)";
 			document.getElementById("seventh").style.display="none";
 		}
 	}
@@ -77,7 +91,7 @@ document.addEventListener("DOMContentLoaded",function(){
 		if(document.getElementById("south").value==("south")||document.getElementById("south").value==("South")||document.getElementById("south").value==("SOUTH")){
 			document.getElementById("ans8").innerText = " Great! Don't go any further West, and (2,5) is a hot spot of doom, but if you go around that the treck to (2,2) is rather nice."
 		} else {
-			document.getElementById("ans8").innerText = " Nope, sorry guess you're going to have to guess this time";
+			document.getElementById("ans8").innerText = " Nope, sorry guess you're going to have to guess this time. (9 blocks to guess)";
 			document.getElementById("eighth").style.display="none";
 		}
 	}
@@ -85,21 +99,21 @@ document.addEventListener("DOMContentLoaded",function(){
 		if(document.getElementById("thirty").value==("thirty")||document.getElementById("thirty").value==("Thirty")||document.getElementById("thirty").value==("THIRTY")||document.getElementById("thirty").value==("30")){
 			document.getElementById("ans9").innerText = " Almost there! Head East 3 blocks."
 		} else {
-			document.getElementById("ans9").innerText = " Nope, sorry guess you're going to have to guess this time";
+			document.getElementById("ans9").innerText = " Nope, sorry guess you're going to have to guess this time. (3 blocks to guess)";
 			document.getElementById("nineth").style.display="none";
 		}
 	}
 	document.getElementById("tenth").onclick = function(){
-		if(document.getElementById("raleigh").value==("Raleigh")||document.getElementById("Raleigh").value==("RALEIGH")){
+		if(document.getElementById("raleigh").value==("Raleigh")||document.getElementById("raleigh").value==("RALEIGH")){
 			document.getElementById("ans10").innerText = " You did it! Just 2 blocks South to your prize!!"
 		} else {
-			document.getElementById("ans10").innerText = " Nope, sorry guess you're going to have to guess this time";
+			document.getElementById("ans10").innerText = " Nope, sorry guess you're going to have to guess this time. (2 blocks to guess)";
 			document.getElementById("tenth").style.display="none";
 		}
 	}
 
 A.onclick = function() {
-	document.getElementById("grid").style.display="none";
+	document.getElementById("A").style.display="none";
 }
 B.onclick = function() {
 		document.getElementById("B").style.display="none";
