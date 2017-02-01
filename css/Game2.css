@@ -15,6 +15,11 @@
 	left:970px;
 	font-size:35px;
 }
+#hero{
+	position:absolute;
+	top:270px;
+	left:227px;
+}
 .riddles{
 	position:absolute;
 	top:25px;
